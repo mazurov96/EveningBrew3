@@ -11,9 +11,15 @@ package eveningbrew;
  */
 public class startFrame extends javax.swing.JFrame {
 
-    /**
-     * Creates new form startFrame
-     */
+    static startFrame stframe = new startFrame();
+    
+    public static void openframe(){
+        stframe.setVisible(true);
+    }
+    
+    public static void closeframe(){
+        stframe.setVisible(false);
+    }
     public startFrame() {
         initComponents();
     }
@@ -83,6 +89,11 @@ public class startFrame extends javax.swing.JFrame {
         jButton8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton8.setForeground(new java.awt.Color(255, 51, 51));
         jButton8.setText("Начать работу");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
         jPanel2.add(jButton8);
         jButton8.setBounds(430, 140, 230, 110);
 
@@ -121,6 +132,11 @@ public class startFrame extends javax.swing.JFrame {
       System.exit(0);
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        startFrame.closeframe();
+        pro18let.openframe();        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton8ActionPerformed
 
     /**
      * @param args the command line arguments
