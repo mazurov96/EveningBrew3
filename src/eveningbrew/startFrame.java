@@ -61,6 +61,11 @@ public class startFrame extends javax.swing.JFrame {
         jButton2.setForeground(new java.awt.Color(255, 51, 51));
         jButton2.setText("О приложении");
         jButton2.setActionCommand("Начать работу");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         jPanel2.add(jButton2);
         jButton2.setBounds(430, 370, 230, 110);
 
@@ -137,6 +142,12 @@ public class startFrame extends javax.swing.JFrame {
         startFrame.closeframe();
         pro18let.openframe();        // TODO add your handling code here:
     }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        O_Razrab_Frame.openframe();
+        startFrame.closeframe();
+    
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

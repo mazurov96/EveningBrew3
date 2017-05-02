@@ -11,9 +11,15 @@ package eveningbrew;
  */
 public class O_Razrab_Frame extends javax.swing.JFrame {
 
-    /**
-     * Creates new form startFrame
-     */
+    static O_Razrab_Frame razframe = new O_Razrab_Frame();
+    
+    public static void openframe(){
+        razframe.setVisible(true);
+    }
+    
+    public static void closeframe(){
+        razframe.setVisible(false);
+    }
     public O_Razrab_Frame() {
         initComponents();
     }
@@ -95,7 +101,8 @@ public class O_Razrab_Frame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-      System.exit(0);
+     O_Razrab_Frame.closeframe();
+     startFrame.openframe();
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
 
