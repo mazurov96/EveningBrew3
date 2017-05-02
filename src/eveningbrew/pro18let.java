@@ -11,9 +11,15 @@ package eveningbrew;
  */
 public class pro18let extends javax.swing.JFrame {
 
-    /**
-     * Creates new form startFrame
-     */
+    static pro18let frame = new pro18let();
+    
+    public static void openframe(){
+        frame.setVisible(true);
+    }
+    
+    public static void closeframe(){
+        frame.setVisible(false);
+    }
     public pro18let() {
         initComponents();
     }
@@ -58,6 +64,11 @@ public class pro18let extends javax.swing.JFrame {
         jButton7.setForeground(new java.awt.Color(255, 51, 51));
         jButton7.setText("ДА!");
         jButton7.setActionCommand("Начать работу");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
         jPanel2.add(jButton7);
         jButton7.setBounds(180, 240, 230, 120);
 
@@ -111,6 +122,10 @@ public class pro18let extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         System.exit(0);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        
+    }//GEN-LAST:event_jButton7ActionPerformed
 
     /**
      * @param args the command line arguments
