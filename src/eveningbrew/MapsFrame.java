@@ -52,7 +52,7 @@ public class MapsFrame extends javax.swing.JFrame {
         jLabel1.setMaximumSize(new java.awt.Dimension(1100, 700));
         jLabel1.setMinimumSize(new java.awt.Dimension(1100, 700));
         jPanel2.add(jLabel1);
-        jLabel1.setBounds(0, 0, 820, 580);
+        jLabel1.setBounds(0, 0, 1070, 660);
 
         jButton2.setText("jButton2");
         jPanel2.add(jButton2);
