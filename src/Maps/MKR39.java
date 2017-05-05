@@ -33,6 +33,7 @@ public class MKR39 extends javax.swing.JFrame {
 
         jPanel2 = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -55,9 +56,15 @@ public class MKR39 extends javax.swing.JFrame {
         jPanel2.add(jButton2);
         jButton2.setBounds(923, 603, 130, 50);
 
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel5.setText("39МКР.Центр.");
+        jPanel2.add(jLabel5);
+        jLabel5.setBounds(90, 20, 320, 80);
+
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MapsFoto/39МКР1.jpg"))); // NOI18N
         jPanel2.add(jLabel2);
-        jLabel2.setBounds(90, 90, 880, 560);
+        jLabel2.setBounds(90, 100, 640, 560);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 51));
@@ -163,6 +170,7 @@ public class MKR39 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }
