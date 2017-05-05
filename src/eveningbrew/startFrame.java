@@ -5,8 +5,6 @@
  */
 package eveningbrew;
 
-import Maps.MapsFrame;
-
 /**
  *
  * @author Nikita

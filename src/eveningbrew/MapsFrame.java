@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Maps;
+package eveningbrew;
 
 import eveningbrew.startFrame;
 
@@ -147,7 +147,7 @@ public class MapsFrame extends javax.swing.JFrame {
         jPanel2.add(jButton2);
         jButton2.setBounds(923, 603, 130, 50);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/foto/oblasti goroda_640x670.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MapsFoto/oblasti goroda_640x670.png"))); // NOI18N
         jPanel2.add(jLabel3);
         jLabel3.setBounds(100, 0, 650, 660);
 
