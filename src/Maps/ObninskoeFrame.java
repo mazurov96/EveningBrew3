@@ -57,7 +57,7 @@ public class ObninskoeFrame extends javax.swing.JFrame {
         jPanel2.add(jButton2);
         jButton2.setBounds(923, 603, 130, 50);
 
-        jLabel2.setText("jLabel2");
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MapsFoto/обнинское1.jpg"))); // NOI18N
         jPanel2.add(jLabel2);
         jLabel2.setBounds(10, 10, 750, 640);
 

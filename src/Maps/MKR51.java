@@ -55,9 +55,9 @@ public class MKR51 extends javax.swing.JFrame {
         jPanel2.add(jButton2);
         jButton2.setBounds(923, 603, 130, 50);
 
-        jLabel2.setText("jLabel2");
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MapsFoto/51МКР1.jpg"))); // NOI18N
         jPanel2.add(jLabel2);
-        jLabel2.setBounds(10, 10, 750, 640);
+        jLabel2.setBounds(0, 80, 820, 640);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 51));
