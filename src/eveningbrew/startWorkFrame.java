@@ -5,6 +5,10 @@
  */
 package eveningbrew;
 
+import WorkWithBD.PodborPiva;
+import WorkWithBD.IzbranFrame;
+import WorkWithBD.InformBDFrame;
+
 /**
  *
  * @author Nikita

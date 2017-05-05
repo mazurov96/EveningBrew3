@@ -3,8 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package eveningbrew;
+package Maps;
 
+import Maps.MKR51;
+import Maps.MKR39;
+import Maps.MKR27;
+import eveningbrew.startFrame;
 import eveningbrew.startFrame;
 
 /**

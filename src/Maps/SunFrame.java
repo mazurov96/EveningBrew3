@@ -3,17 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package eveningbrew;
+package Maps;
 
-import eveningbrew.MapsFrame;
+import Maps.MapsFrame;
 
 /**
  *
  * @author Nikita
  */
-public class MKR39 extends javax.swing.JFrame {
+public class SunFrame extends javax.swing.JFrame {
 
-    static MKR39 razframe = new MKR39();
+    static SunFrame razframe = new SunFrame();
     
     public static void openframe(){
         razframe.setVisible(true);
@@ -22,7 +22,7 @@ public class MKR39 extends javax.swing.JFrame {
     public static void closeframe(){
         razframe.setVisible(false);
     }
-    public MKR39() {
+    public SunFrame() {
         initComponents();
     }
     public void currentTime(){
@@ -34,6 +34,7 @@ public class MKR39 extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -46,6 +47,12 @@ public class MKR39 extends javax.swing.JFrame {
         jPanel2.setMaximumSize(new java.awt.Dimension(1100, 700));
         jPanel2.setLayout(null);
 
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel5.setText("\"Солнечная долина\"");
+        jPanel2.add(jLabel5);
+        jLabel5.setBounds(60, 110, 400, 80);
+
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 0, 0));
         jButton2.setText("Назад");
@@ -57,9 +64,9 @@ public class MKR39 extends javax.swing.JFrame {
         jPanel2.add(jButton2);
         jButton2.setBounds(923, 603, 130, 50);
 
-        jLabel2.setText("jLabel2");
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MapsFoto/sun1_1.jpg"))); // NOI18N
         jPanel2.add(jLabel2);
-        jLabel2.setBounds(10, 10, 750, 640);
+        jLabel2.setBounds(50, 190, 910, 390);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 51));
@@ -88,7 +95,7 @@ public class MKR39 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        MKR39.closeframe();
+        SunFrame.closeframe();
         MapsFrame.openframe();
 
         // TODO add your handling code here:
@@ -111,14 +118,46 @@ public class MKR39 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MKR39.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SunFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MKR39.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SunFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MKR39.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SunFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MKR39.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SunFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -155,7 +194,7 @@ public class MKR39 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MKR39().setVisible(true);
+                new SunFrame().setVisible(true);
             }
         });
     }
@@ -165,6 +204,7 @@ public class MKR39 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }

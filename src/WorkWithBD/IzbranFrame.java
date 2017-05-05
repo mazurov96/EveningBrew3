@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package eveningbrew;
+package WorkWithBD;
 
 import eveningbrew.startWorkFrame;
 
@@ -11,9 +11,9 @@ import eveningbrew.startWorkFrame;
  *
  * @author Nikita
  */
-public class PodborPiva extends javax.swing.JFrame {
+public class IzbranFrame extends javax.swing.JFrame {
 
-    static PodborPiva stframe = new PodborPiva();
+    static IzbranFrame stframe = new IzbranFrame();
     
     public static void openframe(){
         stframe.setVisible(true);
@@ -22,7 +22,7 @@ public class PodborPiva extends javax.swing.JFrame {
     public static void closeframe(){
         stframe.setVisible(false);
     }
-    public PodborPiva() {
+    public IzbranFrame() {
         initComponents();
     }
     public void currentTime(){
@@ -37,7 +37,7 @@ public class PodborPiva extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jInternalFrame1 = new javax.swing.JInternalFrame();
+        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -72,22 +72,10 @@ public class PodborPiva extends javax.swing.JFrame {
         jPanel2.add(jLabel4);
         jLabel4.setBounds(760, 20, 320, 80);
 
-        jInternalFrame1.setTitle("Подбор пива. поиск по бд по критериям!");
-        jInternalFrame1.setVisible(true);
-
-        javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
-        jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
-        jInternalFrame1Layout.setHorizontalGroup(
-            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        jInternalFrame1Layout.setVerticalGroup(
-            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        jPanel2.add(jInternalFrame1);
-        jInternalFrame1.setBounds(330, 130, 490, 360);
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel2.setText("ИЗБРАННОЕ");
+        jPanel2.add(jLabel2);
+        jLabel2.setBounds(440, 460, 190, 70);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 0));
@@ -110,7 +98,7 @@ public class PodborPiva extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-      PodborPiva.closeframe();
+      IzbranFrame.closeframe();
       startWorkFrame.openframe();
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
@@ -132,22 +120,14 @@ public class PodborPiva extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PodborPiva.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(IzbranFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PodborPiva.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(IzbranFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PodborPiva.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(IzbranFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PodborPiva.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(IzbranFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -160,15 +140,15 @@ public class PodborPiva extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PodborPiva().setVisible(true);
+                new IzbranFrame().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton6;
-    private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel2;

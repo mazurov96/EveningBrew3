@@ -3,15 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package eveningbrew;
+package WorkWithBD;
+
+import WorkWithBD.InformBDFrame;
 
 /**
  *
  * @author Nikita
  */
-public class InformBDFrame extends javax.swing.JFrame {
+public class InformationBeer extends javax.swing.JFrame {
 
-    static InformBDFrame stframe = new InformBDFrame();
+    static InformationBeer stframe = new InformationBeer();
     
     public static void openframe(){
         stframe.setVisible(true);
@@ -20,7 +22,7 @@ public class InformBDFrame extends javax.swing.JFrame {
     public static void closeframe(){
         stframe.setVisible(false);
     }
-    public InformBDFrame() {
+    public InformationBeer() {
         initComponents();
     }
     public void currentTime(){
@@ -35,9 +37,7 @@ public class InformBDFrame extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
+        jInternalFrame1 = new javax.swing.JInternalFrame();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -50,7 +50,8 @@ public class InformBDFrame extends javax.swing.JFrame {
         jButton6.setBackground(new java.awt.Color(51, 51, 255));
         jButton6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton6.setForeground(new java.awt.Color(255, 51, 51));
-        jButton6.setText("Адреса магазинов");
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/foto/vyihod_78x78.png"))); // NOI18N
+        jButton6.setText("Назад");
         jButton6.setActionCommand("Начать работу");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,7 +59,7 @@ public class InformBDFrame extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jButton6);
-        jButton6.setBounds(450, 420, 280, 110);
+        jButton6.setBounds(440, 550, 280, 110);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel3.setText("Time");
@@ -71,45 +72,22 @@ public class InformBDFrame extends javax.swing.JFrame {
         jPanel2.add(jLabel4);
         jLabel4.setBounds(760, 20, 320, 80);
 
-        jButton7.setBackground(new java.awt.Color(51, 51, 255));
-        jButton7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(255, 51, 51));
-        jButton7.setText("Просмотр рецептов");
-        jButton7.setActionCommand("Начать работу");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jButton7);
-        jButton7.setBounds(450, 310, 280, 110);
+        jInternalFrame1.setTitle("ИНФОРМАЦИЯ О ПИВЕ С БАЗЫ ДАННЫХ");
+        jInternalFrame1.setVisible(true);
 
-        jButton8.setBackground(new java.awt.Color(51, 51, 255));
-        jButton8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton8.setForeground(new java.awt.Color(255, 51, 51));
-        jButton8.setText("Информация о пиве");
-        jButton8.setActionCommand("Начать работу");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jButton8);
-        jButton8.setBounds(450, 200, 280, 110);
+        javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
+        jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
+        jInternalFrame1Layout.setHorizontalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jInternalFrame1Layout.setVerticalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
 
-        jButton9.setBackground(new java.awt.Color(51, 51, 255));
-        jButton9.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton9.setForeground(new java.awt.Color(255, 51, 51));
-        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/foto/vyihod_78x78.png"))); // NOI18N
-        jButton9.setText("Назад");
-        jButton9.setActionCommand("Начать работу");
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jButton9);
-        jButton9.setBounds(450, 530, 280, 110);
+        jPanel2.add(jInternalFrame1);
+        jInternalFrame1.setBounds(330, 130, 490, 360);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 0));
@@ -132,31 +110,10 @@ public class InformBDFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-      InformBDFrame.closeframe();
-      MagazineAdreses.openframe();
+      InformationBeer.closeframe();
+      InformBDFrame.openframe();
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
-
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        InformBDFrame.closeframe();
-        VievRecept.openframe();
-
-// TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
-
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        InformationBeer.openframe();
-        InformBDFrame.closeframe();
-
-// TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
-
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-    InformBDFrame.closeframe();
-    startWorkFrame.openframe();
-
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton9ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -175,14 +132,70 @@ public class InformBDFrame extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(InformBDFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InformationBeer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(InformBDFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InformationBeer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(InformBDFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InformationBeer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(InformBDFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InformationBeer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -195,16 +208,14 @@ public class InformBDFrame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new InformBDFrame().setVisible(true);
+                new InformationBeer().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
+    private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
