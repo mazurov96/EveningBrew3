@@ -67,11 +67,12 @@ public class startFrame extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jButton2);
-        jButton2.setBounds(430, 370, 230, 110);
+        jButton2.setBounds(420, 370, 250, 110);
 
         jButton6.setBackground(new java.awt.Color(51, 51, 255));
         jButton6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton6.setForeground(new java.awt.Color(255, 51, 51));
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/foto/vyihod_78x78.png"))); // NOI18N
         jButton6.setText("Выход");
         jButton6.setActionCommand("Начать работу");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -80,7 +81,7 @@ public class startFrame extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jButton6);
-        jButton6.setBounds(430, 480, 230, 110);
+        jButton6.setBounds(420, 480, 250, 110);
 
         jButton7.setBackground(new java.awt.Color(51, 51, 255));
         jButton7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -93,11 +94,12 @@ public class startFrame extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jButton7);
-        jButton7.setBounds(430, 250, 230, 120);
+        jButton7.setBounds(420, 250, 250, 120);
 
         jButton8.setBackground(new java.awt.Color(51, 51, 255));
         jButton8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton8.setForeground(new java.awt.Color(255, 51, 51));
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/foto/galka_77x77.png"))); // NOI18N
         jButton8.setText("Начать работу");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -105,7 +107,7 @@ public class startFrame extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jButton8);
-        jButton8.setBounds(430, 140, 230, 110);
+        jButton8.setBounds(420, 140, 250, 110);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel3.setText("Time");

@@ -100,6 +100,7 @@ public class InformBDFrame extends javax.swing.JFrame {
         jButton9.setBackground(new java.awt.Color(51, 51, 255));
         jButton9.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton9.setForeground(new java.awt.Color(255, 51, 51));
+        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/foto/vyihod_78x78.png"))); // NOI18N
         jButton9.setText("Назад");
         jButton9.setActionCommand("Начать работу");
         jButton9.addActionListener(new java.awt.event.ActionListener() {

@@ -49,6 +49,7 @@ public class pro18let extends javax.swing.JFrame {
         jButton2.setBackground(new java.awt.Color(51, 51, 255));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 51, 51));
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/foto/vyihod_78x78.png"))); // NOI18N
         jButton2.setText("НЕТ");
         jButton2.setActionCommand("Начать работу");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -62,6 +63,7 @@ public class pro18let extends javax.swing.JFrame {
         jButton7.setBackground(new java.awt.Color(51, 51, 255));
         jButton7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton7.setForeground(new java.awt.Color(255, 51, 51));
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/foto/galka_77x77.png"))); // NOI18N
         jButton7.setText("ДА!");
         jButton7.setActionCommand("Начать работу");
         jButton7.addActionListener(new java.awt.event.ActionListener() {

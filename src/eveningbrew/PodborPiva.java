@@ -48,6 +48,7 @@ public class PodborPiva extends javax.swing.JFrame {
         jButton6.setBackground(new java.awt.Color(51, 51, 255));
         jButton6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton6.setForeground(new java.awt.Color(255, 51, 51));
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/foto/vyihod_78x78.png"))); // NOI18N
         jButton6.setText("Назад");
         jButton6.setActionCommand("Начать работу");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
