@@ -3,15 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package eveningbrew;
+package WorkWithBD;
+
+import eveningbrew.startWorkFrame;
 
 /**
  *
  * @author Nikita
  */
-public class MagazineAdreses extends javax.swing.JFrame {
+public class PodborPiva extends javax.swing.JFrame {
 
-    static MagazineAdreses stframe = new MagazineAdreses();
+    static PodborPiva stframe = new PodborPiva();
     
     public static void openframe(){
         stframe.setVisible(true);
@@ -20,7 +22,7 @@ public class MagazineAdreses extends javax.swing.JFrame {
     public static void closeframe(){
         stframe.setVisible(false);
     }
-    public MagazineAdreses() {
+    public PodborPiva() {
         initComponents();
     }
     public void currentTime(){
@@ -70,7 +72,7 @@ public class MagazineAdreses extends javax.swing.JFrame {
         jPanel2.add(jLabel4);
         jLabel4.setBounds(760, 20, 320, 80);
 
-        jInternalFrame1.setTitle("Список магазинов с Базы данных");
+        jInternalFrame1.setTitle("Подбор пива. поиск по бд по критериям!");
         jInternalFrame1.setVisible(true);
 
         javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
@@ -108,8 +110,8 @@ public class MagazineAdreses extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-      MagazineAdreses.closeframe();
-      InformBDFrame.openframe();
+      PodborPiva.closeframe();
+      startWorkFrame.openframe();
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
 
@@ -130,30 +132,14 @@ public class MagazineAdreses extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MagazineAdreses.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PodborPiva.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MagazineAdreses.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PodborPiva.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MagazineAdreses.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PodborPiva.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MagazineAdreses.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PodborPiva.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -174,7 +160,7 @@ public class MagazineAdreses extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MagazineAdreses().setVisible(true);
+                new PodborPiva().setVisible(true);
             }
         });
     }

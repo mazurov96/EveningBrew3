@@ -5,6 +5,10 @@
  */
 package eveningbrew;
 
+import WorkWithBD.InformationBeer;
+import WorkWithBD.MagazineAdreses;
+import WorkWithBD.VievRecept;
+
 /**
  *
  * @author Nikita
