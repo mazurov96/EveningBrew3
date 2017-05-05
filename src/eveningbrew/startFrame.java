@@ -75,6 +75,7 @@ public class startFrame extends javax.swing.JFrame {
         jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/foto/vyihod_78x78.png"))); // NOI18N
         jButton6.setText("Выход");
         jButton6.setActionCommand("Начать работу");
+        jButton6.setMargin(new java.awt.Insets(2, 14, 2, 70));
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
