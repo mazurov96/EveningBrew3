@@ -124,7 +124,8 @@ public class pro18let extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        
+   pro18let.closeframe();
+   startWorkFrame.openframe();
     }//GEN-LAST:event_jButton7ActionPerformed
 
     /**

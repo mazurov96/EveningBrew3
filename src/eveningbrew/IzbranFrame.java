@@ -35,6 +35,7 @@ public class IzbranFrame extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -55,7 +56,7 @@ public class IzbranFrame extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jButton6);
-        jButton6.setBounds(450, 530, 280, 110);
+        jButton6.setBounds(440, 550, 280, 110);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel3.setText("Time");
@@ -67,6 +68,11 @@ public class IzbranFrame extends javax.swing.JFrame {
         jLabel4.setText("EVENING BREW");
         jPanel2.add(jLabel4);
         jLabel4.setBounds(760, 20, 320, 80);
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel2.setText("ИЗБРАННОЕ");
+        jPanel2.add(jLabel2);
+        jLabel2.setBounds(440, 460, 190, 70);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 0));
@@ -89,7 +95,8 @@ public class IzbranFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-      System.exit(0);
+      IzbranFrame.closeframe();
+      startWorkFrame.openframe();
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
 
@@ -138,6 +145,7 @@ public class IzbranFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel2;

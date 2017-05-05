@@ -39,6 +39,7 @@ public class RasschTrezvFrame1 extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(1100, 700));
         setMinimumSize(new java.awt.Dimension(1100, 700));
 
         jPanel2.setForeground(new java.awt.Color(255, 51, 102));
@@ -107,7 +108,8 @@ public class RasschTrezvFrame1 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-      System.exit(0);
+      RasschTrezvFrame1.closeframe();
+      startWorkFrame.openframe();
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
 

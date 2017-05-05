@@ -131,19 +131,29 @@ public class InformBDFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-      System.exit(0);
+      InformBDFrame.closeframe();
+      MagazineAdreses.openframe();
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
+        InformBDFrame.closeframe();
+        VievRecept.openframe();
+
+// TODO add your handling code here:
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
+        InformationBeer.openframe();
+        InformBDFrame.closeframe();
+
+// TODO add your handling code here:
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+    InformBDFrame.closeframe();
+    startWorkFrame.openframe();
+
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton9ActionPerformed
 

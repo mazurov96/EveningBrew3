@@ -87,6 +87,11 @@ public class startFrame extends javax.swing.JFrame {
         jButton7.setForeground(new java.awt.Color(255, 51, 51));
         jButton7.setText("Показ карты города");
         jButton7.setActionCommand("Начать работу");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
         jPanel2.add(jButton7);
         jButton7.setBounds(430, 250, 230, 120);
 
@@ -148,6 +153,14 @@ public class startFrame extends javax.swing.JFrame {
         startFrame.closeframe();
     
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+       startFrame.closeframe();
+       MapsFrame.openframe();
+
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton7ActionPerformed
 
     /**
      * @param args the command line arguments

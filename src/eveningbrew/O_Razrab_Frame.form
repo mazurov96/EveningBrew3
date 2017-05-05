@@ -110,7 +110,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="&#x41d;&#x410;&#x41f;&#x418;&#x421;&#x410;&#x422;&#x42c; &#x422;&#x415;&#x41a;&#x421;&#x422;"/>
+            <Property name="text" type="java.lang.String" value="&#x43e; &#x43f;&#x440;&#x438;&#x43b;&#x43e;&#x436;&#x435;&#x43d;&#x438;&#x438;/ &#x440;&#x430;&#x437;&#x440;&#x430;&#x431;&#x430;&#x445;"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1ActionPerformed"/>
