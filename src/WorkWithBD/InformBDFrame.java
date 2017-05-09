@@ -5,6 +5,7 @@
  */
 package WorkWithBD;
 
+import PrintDB.JTabBM;
 import eveningbrew.startWorkFrame;
 
 /**
@@ -149,6 +150,9 @@ public class InformBDFrame extends javax.swing.JFrame {
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         InformationBeer.openframe();
         InformBDFrame.closeframe();
+         JTabBM.DB();
+     JTabBM.openframe();
+     
 
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton8ActionPerformed
