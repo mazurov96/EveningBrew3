@@ -64,7 +64,7 @@ public class SunFrame extends javax.swing.JFrame {
         jPanel2.add(jButton2);
         jButton2.setBounds(923, 603, 130, 50);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MapsFoto/sun1_1.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MapsFoto/sun1.jpg"))); // NOI18N
         jPanel2.add(jLabel2);
         jLabel2.setBounds(50, 190, 910, 390);
 

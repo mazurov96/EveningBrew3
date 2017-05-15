@@ -88,7 +88,7 @@
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/MapsFoto/&#x43e;&#x431;&#x43d;&#x438;&#x43d;&#x441;&#x43a;&#x43e;&#x435;1_1.jpg"/>
+              <Image iconType="3" name="/MapsFoto/&#x43e;&#x431;&#x43d;&#x438;&#x43d;&#x441;&#x43a;&#x43e;&#x435;1.jpg"/>
             </Property>
           </Properties>
           <Constraints>
