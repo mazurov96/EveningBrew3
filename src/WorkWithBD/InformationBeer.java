@@ -5,7 +5,12 @@
  */
 package WorkWithBD;
 
-import WorkWithBD.InformBDFrame;
+import PrintInfoBeer.JTabBM;
+import PrintInfoBeer.ReadDataBM;
+
+import javax.swing.table.TableModel;
+
+
 
 /**
  *
@@ -13,16 +18,21 @@ import WorkWithBD.InformBDFrame;
  */
 public class InformationBeer extends javax.swing.JFrame {
 
-    static InformationBeer stframe = new InformationBeer();
-    
+    static InformationBeer stframe = new  InformationBeer();
+    static JTabBM tableBM;
     public static void openframe(){
         stframe.setVisible(true);
+        tableBM.update();
+    
     }
     
     public static void closeframe(){
         stframe.setVisible(false);
     }
     public InformationBeer() {
+        ReadDataBM data=new ReadDataBM();
+        tableBM=new JTabBM(data.ReadData());
+        
         initComponents();
     }
    
@@ -32,6 +42,8 @@ public class InformationBeer extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         jButton6 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -43,6 +55,12 @@ public class InformationBeer extends javax.swing.JFrame {
         jPanel2.setForeground(new java.awt.Color(255, 51, 102));
         jPanel2.setMaximumSize(new java.awt.Dimension(1100, 700));
         jPanel2.setLayout(null);
+
+        jTable1.setModel(tableBM);
+        jScrollPane1.setViewportView(jTable1);
+
+        jPanel2.add(jScrollPane1);
+        jScrollPane1.setBounds(150, 90, 660, 380);
 
         jButton6.setBackground(new java.awt.Color(51, 51, 255));
         jButton6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -79,11 +97,11 @@ public class InformationBeer extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 1100, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 1100, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -188,7 +206,7 @@ public class InformationBeer extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new InformationBeer().setVisible(true);
+                
             }
         });
     }
@@ -199,5 +217,7 @@ public class InformationBeer extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }

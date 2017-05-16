@@ -5,7 +5,7 @@
  */
 package eveningbrew;
 
-import PrintDB.JTabBM;
+import PrintInfoBeer.JTabBM;
 import WorkWithBD.PodborPiva;
 import WorkWithBD.IzbranFrame;
 import WorkWithBD.InformBDFrame;
@@ -96,7 +96,7 @@ public class startWorkFrame extends javax.swing.JFrame {
         jButton8.setBackground(new java.awt.Color(51, 51, 255));
         jButton8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton8.setForeground(new java.awt.Color(255, 51, 51));
-        jButton8.setText("Инфорация Базы Данных");
+        jButton8.setText("Информация ");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton8ActionPerformed(evt);

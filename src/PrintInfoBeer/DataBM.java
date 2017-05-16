@@ -3,62 +3,62 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package PrintDB;
+package PrintInfoBeer;
 
 /**
  *
  * @author Nikita
  */
-public class TBM {
-    public String id;
-    public String  Name;
-    public String  Fortress;
-    public String Color;
-    public String Vessel;
-    public String Address;
-    public String Price;
+public class DataBM {
+    private String id;
+    private String name;
+    private String fortress;
+    private String color;
+    private String vessel;
+    private String address;
+    private String price;
     
     public void getId(String a){
         id=a;
     }
     public void getName(String a){
-        Name=a;
+        name=a;
     }
     public void getFortress(String a){
-        Fortress=a;
+        fortress=a;
     }
     public void getColor(String a){
-        Color=a;
+        color=a;
     }
     public void getVessel(String a){
-        Vessel=a;
+        vessel=a;
     }
     public void getAddress(String a){
-        Address=a;
+        address=a;
     }
     public void getPrice(String a){
-        Price=a;
+        price=a;
     }
     public String putId(){
         return id;
     }
     public String putName(){
-        return Name;
+        return name;
     }
     public String putFortress(){
-        return Fortress;
+        return fortress;
     }
     public String putColor(){
-        return Color;
+        return color;
     }
     public String putVessel(){
-        return Vessel;
+        return vessel;
     }
     public String putAddress(){
-        return Address;
+        return address;
     }
     public String putPrice(){
-        return Price;
+        return price;
     }
     
     
