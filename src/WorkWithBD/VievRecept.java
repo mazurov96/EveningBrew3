@@ -5,7 +5,11 @@
  */
 package WorkWithBD;
 
-import WorkWithBD.InformBDFrame;
+import PrintRecept.JTabRcpt;
+import PrintRecept.ReadDataRcpt;
+
+
+
 
 /**
  *
@@ -14,7 +18,7 @@ import WorkWithBD.InformBDFrame;
 public class VievRecept extends javax.swing.JFrame {
 
     static VievRecept stframe = new VievRecept();
-    
+    JTabRcpt myModel;
     public static void openframe(){
         stframe.setVisible(true);
     }
@@ -23,6 +27,8 @@ public class VievRecept extends javax.swing.JFrame {
         stframe.setVisible(false);
     }
     public VievRecept() {
+       ReadDataRcpt data=new ReadDataRcpt();
+       myModel= new JTabRcpt(data.ReadData());
         initComponents();
     }
     public void currentTime(){
@@ -34,10 +40,11 @@ public class VievRecept extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         jButton6 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jInternalFrame1 = new javax.swing.JInternalFrame();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -46,6 +53,12 @@ public class VievRecept extends javax.swing.JFrame {
         jPanel2.setForeground(new java.awt.Color(255, 51, 102));
         jPanel2.setMaximumSize(new java.awt.Dimension(1100, 700));
         jPanel2.setLayout(null);
+
+        jTable1.setModel(myModel);
+        jScrollPane1.setViewportView(jTable1);
+
+        jPanel2.add(jScrollPane1);
+        jScrollPane1.setBounds(30, 80, 930, 360);
 
         jButton6.setBackground(new java.awt.Color(51, 51, 255));
         jButton6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -71,23 +84,6 @@ public class VievRecept extends javax.swing.JFrame {
         jLabel4.setText("EVENING BREW");
         jPanel2.add(jLabel4);
         jLabel4.setBounds(760, 20, 320, 80);
-
-        jInternalFrame1.setTitle("ПРОСМОТР РЕЦЕПТОВ С БАЗЫ ДАННЫХ");
-        jInternalFrame1.setVisible(true);
-
-        javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
-        jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
-        jInternalFrame1Layout.setHorizontalGroup(
-            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        jInternalFrame1Layout.setVerticalGroup(
-            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        jPanel2.add(jInternalFrame1);
-        jInternalFrame1.setBounds(330, 130, 490, 360);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 0));
@@ -183,10 +179,11 @@ public class VievRecept extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton6;
-    private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }

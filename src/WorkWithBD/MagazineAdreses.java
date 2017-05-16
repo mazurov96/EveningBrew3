@@ -59,7 +59,7 @@ public class MagazineAdreses extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable1);
 
         jPanel2.add(jScrollPane1);
-        jScrollPane1.setBounds(170, 80, 610, 390);
+        jScrollPane1.setBounds(170, 80, 610, 240);
 
         jButton1.setText("Обновить");
         jButton1.addActionListener(new java.awt.event.ActionListener() {

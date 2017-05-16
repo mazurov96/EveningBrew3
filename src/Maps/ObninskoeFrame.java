@@ -34,6 +34,7 @@ public class ObninskoeFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
+        jTextField1 = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -46,6 +47,15 @@ public class ObninskoeFrame extends javax.swing.JFrame {
         jPanel2.setForeground(new java.awt.Color(255, 51, 102));
         jPanel2.setMaximumSize(new java.awt.Dimension(1100, 700));
         jPanel2.setLayout(null);
+
+        jTextField1.setText("Красные точки- магазины");
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jTextField1);
+        jTextField1.setBounds(520, 270, 160, 50);
 
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 0, 0));
@@ -100,6 +110,10 @@ public class ObninskoeFrame extends javax.swing.JFrame {
 
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -158,5 +172,6 @@ public class ObninskoeFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
