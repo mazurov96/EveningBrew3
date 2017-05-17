@@ -5,8 +5,13 @@
  */
 package WorkWithBD;
 
+import PrintInfoBeer.DataBM;
+import PrintInfoBeer.JTabBM;
+import PrintInfoBeer.ReadDataBM;
+
+
 import eveningbrew.startWorkFrame;
-import eveningbrew.startWorkFrame;
+import java.util.ArrayList;
 
 /**
  *
@@ -15,6 +20,9 @@ import eveningbrew.startWorkFrame;
 public class PodborPiva extends javax.swing.JFrame {
 
     static PodborPiva stframe = new PodborPiva();
+    static JTabBM tableBM;
+    ReadDataBM z;
+    ArrayList<DataBM> searchlist;
     
     public static void openframe(){
         stframe.setVisible(true);
@@ -24,21 +32,22 @@ public class PodborPiva extends javax.swing.JFrame {
         stframe.setVisible(false);
     }
     public PodborPiva() {
+        z = new ReadDataBM();
         initComponents();
     }
-    public void currentTime(){
-        
-    }
+   
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
+        jTextField1 = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jButton1 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jInternalFrame1 = new javax.swing.JInternalFrame();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -47,6 +56,39 @@ public class PodborPiva extends javax.swing.JFrame {
         jPanel2.setForeground(new java.awt.Color(255, 51, 102));
         jPanel2.setMaximumSize(new java.awt.Dimension(1100, 700));
         jPanel2.setLayout(null);
+
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jTextField1);
+        jTextField1.setBounds(130, 410, 110, 40);
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Название", "Крепость", "Цвет", "Упаковка", "Адрес", "Цена"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        jPanel2.add(jScrollPane1);
+        jScrollPane1.setBounds(270, 190, 540, 300);
+
+        jButton1.setText("Поиск");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton1);
+        jButton1.setBounds(130, 480, 130, 50);
 
         jButton6.setBackground(new java.awt.Color(51, 51, 255));
         jButton6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -62,33 +104,11 @@ public class PodborPiva extends javax.swing.JFrame {
         jPanel2.add(jButton6);
         jButton6.setBounds(440, 550, 280, 110);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel3.setText("Time");
-        jPanel2.add(jLabel3);
-        jLabel3.setBounds(100, 340, 70, 40);
-
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 51));
         jLabel4.setText("EVENING BREW");
         jPanel2.add(jLabel4);
         jLabel4.setBounds(760, 20, 320, 80);
-
-        jInternalFrame1.setTitle("Подбор пива. поиск по бд по критериям!");
-        jInternalFrame1.setVisible(true);
-
-        javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
-        jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
-        jInternalFrame1Layout.setHorizontalGroup(
-            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        jInternalFrame1Layout.setVerticalGroup(
-            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        jPanel2.add(jInternalFrame1);
-        jInternalFrame1.setBounds(330, 130, 490, 360);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 0));
@@ -116,6 +136,55 @@ public class PodborPiva extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
 
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        String name = jTextField1.getText();
+        searchlist = search(name,z.ReadData());
+         
+        jTextField1.setText("");
+        if(searchlist==null) jTextField1.setText("Error");
+        if(searchlist.isEmpty()) {jTextField1.setText("No Data");
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        new Object [][] {
+             {null, null, null, null},
+             {null, null, null, null},
+             {null, null, null, null},
+             {null, null, null, null}
+            },
+         new String [] {
+          "Название", "Крепость", "Цвет", "Упаковка", "Адрес", "Цена"
+    }
+));}
+        else { tableBM =  new JTabBM(searchlist);
+               jTable1.setModel(tableBM);
+        
+        
+       
+        }
+        
+          
+                // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+   /**
+    * SD 
+    * @param x - название пива, которое ищем
+    * @param y - массив, по которому ищем
+    * @return 
+    */
+    public ArrayList<DataBM> search(String x, ArrayList<DataBM> y){
+        if(y==null) return null;
+        ArrayList<DataBM> result = new ArrayList<>();
+        
+        for(int i=0; i<y.size(); i++){
+            if( x.startsWith(y.get(i).putName()) ) {System.out.println(i);
+                                           result.add(y.get(i));}; 
+        }
+        
+        return result;
+    }
     /**
      * @param args the command line arguments
      */
@@ -167,11 +236,14 @@ public class PodborPiva extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton6;
-    private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
+
 }
