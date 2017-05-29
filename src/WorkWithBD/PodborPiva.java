@@ -181,14 +181,29 @@ public class PodborPiva extends javax.swing.JFrame {
         jButtonFortress.setBounds(300, 80, 120, 40);
 
         jButtonColor.setText("Поиск");
+        jButtonColor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonColorActionPerformed(evt);
+            }
+        });
         jPanel2.add(jButtonColor);
         jButtonColor.setBounds(300, 130, 120, 40);
 
         jButtonVessel.setText("Поиск");
+        jButtonVessel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonVesselActionPerformed(evt);
+            }
+        });
         jPanel2.add(jButtonVessel);
         jButtonVessel.setBounds(300, 190, 120, 40);
 
         jButtonPrice.setText("Поиск");
+        jButtonPrice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonPriceActionPerformed(evt);
+            }
+        });
         jPanel2.add(jButtonPrice);
         jButtonPrice.setBounds(300, 250, 120, 40);
 
@@ -296,7 +311,86 @@ public class PodborPiva extends javax.swing.JFrame {
                jTable1.setModel(tableBM);      
         }
     }//GEN-LAST:event_jButtonFortressActionPerformed
-   /**
+
+    private void jButtonColorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonColorActionPerformed
+        String name = jTextColor.getText();
+        searchlist = searchColor(name,z.ReadData());
+         
+        jTextField1.setText("");
+        jTextFortress.setText("");
+        jTextColor.setText("");
+        jTextVessel.setText("");
+        jTextPrice.setText("");
+        if(searchlist==null) jTextColor.setText("Error");
+        if(searchlist.isEmpty()) {jTextColor.setText("No Data");
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        new Object [][] {           
+             {null, null, null, null}
+            },
+         new String [] {
+          "Название", "Крепость", "Цвет", "Упаковка","Особенности","Адрес",
+             "Цена"
+    }
+));}
+        else { tableBM =  new JTabBM(searchlist);
+               jTable1.setModel(tableBM);      
+        }
+    }//GEN-LAST:event_jButtonColorActionPerformed
+
+    private void jButtonVesselActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVesselActionPerformed
+        String name = jTextVessel.getText();
+        searchlist = searchVessel(name,z.ReadData());
+         
+        jTextField1.setText("");
+        jTextFortress.setText("");
+        jTextColor.setText("");
+        jTextVessel.setText("");
+        jTextPrice.setText("");
+                
+        if(searchlist==null) jTextVessel.setText("Error");
+        if(searchlist.isEmpty()) {jTextVessel.setText("No Data");
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        new Object [][] {           
+             {null, null, null, null}
+            },
+         new String [] {
+          "Название", "Крепость", "Цвет", "Упаковка","Особенности","Адрес",
+             "Цена"
+    }
+));}
+        else { tableBM =  new JTabBM(searchlist);
+               jTable1.setModel(tableBM);      
+        }
+    }//GEN-LAST:event_jButtonVesselActionPerformed
+
+    private void jButtonPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPriceActionPerformed
+        String name = jTextPrice.getText();
+        
+        searchlist = searchPrice(name,z.ReadData());
+         
+        jTextField1.setText("");
+        jTextFortress.setText("");
+        jTextColor.setText("");
+        jTextVessel.setText("");
+        jTextPrice.setText("");
+                
+        if(searchlist==null) jTextPrice.setText("Error");
+        if(searchlist.isEmpty()) {jTextPrice.setText("No Data");
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        new Object [][] {           
+             {null, null, null, null}
+            },
+         new String [] {
+          "Название", "Крепость", "Цвет", "Упаковка","Особенности","Адрес",
+             "Цена"
+    }
+));}
+        else { tableBM =  new JTabBM(searchlist);
+               jTable1.setModel(tableBM);      
+        }
+    }//GEN-LAST:event_jButtonPriceActionPerformed
+   
+    /**
     * SD 
     * @param x - название пива, которое ищем
     * @param y - массив, по которому ищем
@@ -322,6 +416,43 @@ public class PodborPiva extends javax.swing.JFrame {
         
         for(int i=0; i<y.size(); i++){
             if( y.get(i).putFortress().startsWith(x) ) 
+                                           result.add(y.get(i)); 
+        }
+        
+        return result;
+    }
+    public ArrayList<DataBM> searchColor(String x, ArrayList<DataBM> y){
+        if(y==null) return null;
+        if(x.isEmpty())   return new ArrayList<>();
+        ArrayList<DataBM> result = new ArrayList<>();
+        
+        for(int i=0; i<y.size(); i++){
+            if( y.get(i).putColor().startsWith(x) ) 
+                                           result.add(y.get(i)); 
+        }
+        
+        return result;
+    }
+    
+    public ArrayList<DataBM> searchVessel(String x, ArrayList<DataBM> y){
+        if(y==null) return null;
+        if(x.isEmpty())   return new ArrayList<>();
+        ArrayList<DataBM> result = new ArrayList<>();
+        
+        for(int i=0; i<y.size(); i++){
+            if( y.get(i).putVessel().startsWith(x) ) 
+                                           result.add(y.get(i)); 
+        }
+        
+        return result;
+    }
+    public ArrayList<DataBM> searchPrice(String x, ArrayList<DataBM> y){
+        if(y==null) return null;
+        if(x.isEmpty())   return new ArrayList<>();
+        ArrayList<DataBM> result = new ArrayList<>();
+        
+        for(int i=0; i<y.size(); i++){
+            if( y.get(i).putPrice().startsWith(x) ) 
                                            result.add(y.get(i)); 
         }
         
