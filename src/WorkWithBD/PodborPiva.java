@@ -45,6 +45,7 @@ public class PodborPiva extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jLabel5 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
@@ -63,7 +64,7 @@ public class PodborPiva extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jTextField1);
-        jTextField1.setBounds(130, 410, 110, 40);
+        jTextField1.setBounds(200, 240, 110, 40);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -79,7 +80,13 @@ public class PodborPiva extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable1);
 
         jPanel2.add(jScrollPane1);
-        jScrollPane1.setBounds(270, 190, 540, 300);
+        jScrollPane1.setBounds(330, 190, 540, 300);
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Введите название пива:");
+        jPanel2.add(jLabel5);
+        jLabel5.setBounds(10, 230, 210, 60);
 
         jButton1.setText("Поиск");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -88,7 +95,7 @@ public class PodborPiva extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jButton1);
-        jButton1.setBounds(130, 480, 130, 50);
+        jButton1.setBounds(200, 290, 110, 40);
 
         jButton6.setBackground(new java.awt.Color(51, 51, 255));
         jButton6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -240,6 +247,7 @@ public class PodborPiva extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
