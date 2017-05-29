@@ -50,8 +50,9 @@ public class ReadDataBM {
                  ft.getFortress(rs.getString(3));
                  ft.getColor(rs.getString(4));
                  ft.getVessel(rs.getString(5));
-                 ft.getAddress(rs.getString(6));
-                 ft.getPrice(rs.getString(7));
+                 ft.getSpecification(rs.getString(6));
+                 ft.getAddress(rs.getString(7));
+                 ft.getPrice(rs.getString(8));
                  listBM.add(ft);
                 
                 //System.out.println("Name Beer : " + carid);

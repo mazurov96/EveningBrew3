@@ -30,7 +30,7 @@ public class JTabBM extends AbstractTableModel{
     }
     @Override
     public int getColumnCount() {
-        return 6;
+        return 7;
     }
     
      @Override
@@ -45,6 +45,8 @@ public class JTabBM extends AbstractTableModel{
             case 3:
                 return "Упаковка";
             case 4:
+                return "Особенности";
+            case 5:
                 return "Производитель";
             default:
                 return "Цена/0.5";
@@ -63,6 +65,8 @@ public class JTabBM extends AbstractTableModel{
             case 3:
                 return listBM.get(rowIndex).putVessel();
             case 4:
+                return listBM.get(rowIndex).putSpecification();
+            case 5:
                 return listBM.get(rowIndex).putAddress();
             default:
                 return listBM.get(rowIndex).putPrice();
