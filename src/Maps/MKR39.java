@@ -62,7 +62,7 @@ public class MKR39 extends javax.swing.JFrame {
         jPanel2.add(jLabel5);
         jLabel5.setBounds(90, 20, 320, 80);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MapsFoto/39МКР1.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MapsFoto/39МКР1_1.jpg"))); // NOI18N
         jPanel2.add(jLabel2);
         jLabel2.setBounds(90, 100, 640, 560);
 

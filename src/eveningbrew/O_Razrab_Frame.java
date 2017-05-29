@@ -33,9 +33,9 @@ public class O_Razrab_Frame extends javax.swing.JFrame {
 
         jPanel2 = new javax.swing.JPanel();
         jButton6 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -59,27 +59,21 @@ public class O_Razrab_Frame extends javax.swing.JFrame {
         jPanel2.add(jButton6);
         jButton6.setBounds(340, 480, 230, 110);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel3.setText("Time");
-        jPanel2.add(jLabel3);
-        jLabel3.setBounds(100, 340, 70, 40);
+        jTextArea1.setBackground(new java.awt.Color(255, 102, 0));
+        jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
+        jTextArea1.setRows(5);
+        jTextArea1.setText("Большинство людей хоть раз в жизни пытались или имели искушение попробовать вкусное пиво,\nно его бывает сложно отыскать. Одни покупают бутылочное пиво в простых магазинах, \nдругие посещают всевозможные пабы. Поэтому мы решили создать приложение,\nкоторое поможет настоящему гурману этого напитка найти сорт пива, который\nподойдет ему по всем параметрам.");
+        jScrollPane1.setViewportView(jTextArea1);
+
+        jPanel2.add(jScrollPane1);
+        jScrollPane1.setBounds(120, 120, 730, 340);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 51));
         jLabel4.setText("EVENING BREW");
         jPanel2.add(jLabel4);
         jLabel4.setBounds(760, 20, 320, 80);
-
-        jTextField1.setBackground(new java.awt.Color(255, 204, 102));
-        jTextField1.setForeground(new java.awt.Color(255, 0, 0));
-        jTextField1.setText("о приложении/ разрабах");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jTextField1);
-        jTextField1.setBounds(160, 110, 570, 300);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 0));
@@ -106,10 +100,6 @@ public class O_Razrab_Frame extends javax.swing.JFrame {
      startFrame.openframe();
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
-
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -150,9 +140,9 @@ public class O_Razrab_Frame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }
