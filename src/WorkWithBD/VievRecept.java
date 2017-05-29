@@ -7,6 +7,8 @@ package WorkWithBD;
 
 import PrintRecept.JTabRcpt;
 import PrintRecept.ReadDataRcpt;
+import java.awt.event.MouseEvent;
+import javax.swing.table.TableModel;
 
 
 
@@ -42,6 +44,8 @@ public class VievRecept extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
         jButton6 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -55,10 +59,22 @@ public class VievRecept extends javax.swing.JFrame {
         jPanel2.setLayout(null);
 
         jTable1.setModel(myModel);
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jTable1MousePressed(evt);
+            }
+        });
         jScrollPane1.setViewportView(jTable1);
 
         jPanel2.add(jScrollPane1);
-        jScrollPane1.setBounds(30, 80, 930, 360);
+        jScrollPane1.setBounds(30, 80, 1020, 300);
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane2.setViewportView(jTextArea1);
+
+        jPanel2.add(jScrollPane2);
+        jScrollPane2.setBounds(30, 440, 1020, 60);
 
         jButton6.setBackground(new java.awt.Color(51, 51, 255));
         jButton6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -110,6 +126,20 @@ public class VievRecept extends javax.swing.JFrame {
       InformBDFrame.openframe();
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jTable1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MousePressed
+         if(evt.getButton() == MouseEvent.BUTTON3) {
+          int column = jTable1.columnAtPoint(evt.getPoint());
+          int row = jTable1.rowAtPoint(evt.getPoint());
+          jTable1.setColumnSelectionInterval(column, column);
+          jTable1.setRowSelectionInterval(row, row);
+          TableModel model = jTable1.getModel();
+          Object value = model.getValueAt(row, column);   
+          jTextArea1.setText(value.toString());
+          
+          
+     } // TODO add your handling code here:
+    }//GEN-LAST:event_jTable1MousePressed
 
     /**
      * @param args the command line arguments
@@ -184,6 +214,8 @@ public class VievRecept extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }

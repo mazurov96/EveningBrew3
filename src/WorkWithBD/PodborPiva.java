@@ -45,8 +45,21 @@ public class PodborPiva extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jTextFortress = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jTextColor = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        jTextVessel = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        jTextPrice = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
+        jButtonFortress = new javax.swing.JButton();
+        jButtonColor = new javax.swing.JButton();
+        jButtonVessel = new javax.swing.JButton();
+        jButtonPrice = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
@@ -63,23 +76,77 @@ public class PodborPiva extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jTextField1);
-        jTextField1.setBounds(130, 410, 110, 40);
+        jTextField1.setBounds(170, 20, 110, 40);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
                 {null, null, null, null}
             },
             new String [] {
-                "Название", "Крепость", "Цвет", "Упаковка", "Адрес", "Цена"
+                "Название", "Крепость", "Цвет", "Упаковка","Особенности","Адрес", "Цена"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
 
         jPanel2.add(jScrollPane1);
-        jScrollPane1.setBounds(270, 190, 540, 300);
+        jScrollPane1.setBounds(440, 100, 630, 300);
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setText("Введите название пива:");
+        jPanel2.add(jLabel2);
+        jLabel2.setBounds(10, 20, 150, 30);
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel3.setText("Введите крепость:");
+        jPanel2.add(jLabel3);
+        jLabel3.setBounds(10, 80, 150, 30);
+
+        jTextFortress.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFortressActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jTextFortress);
+        jTextFortress.setBounds(170, 80, 110, 40);
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel5.setText("Введите цвет пива:");
+        jPanel2.add(jLabel5);
+        jLabel5.setBounds(10, 130, 150, 30);
+
+        jTextColor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextColorActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jTextColor);
+        jTextColor.setBounds(170, 130, 110, 40);
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel6.setText("Какая упаковка пива:");
+        jPanel2.add(jLabel6);
+        jLabel6.setBounds(10, 190, 150, 30);
+
+        jTextVessel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextVesselActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jTextVessel);
+        jTextVessel.setBounds(170, 190, 110, 40);
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel7.setText("Введите цену пива:");
+        jPanel2.add(jLabel7);
+        jLabel7.setBounds(10, 250, 150, 30);
+
+        jTextPrice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextPriceActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jTextPrice);
+        jTextPrice.setBounds(170, 250, 110, 40);
 
         jButton1.setText("Поиск");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -88,7 +155,7 @@ public class PodborPiva extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jButton1);
-        jButton1.setBounds(130, 480, 130, 50);
+        jButton1.setBounds(300, 20, 120, 40);
 
         jButton6.setBackground(new java.awt.Color(51, 51, 255));
         jButton6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -103,6 +170,42 @@ public class PodborPiva extends javax.swing.JFrame {
         });
         jPanel2.add(jButton6);
         jButton6.setBounds(440, 550, 280, 110);
+
+        jButtonFortress.setText("Поиск");
+        jButtonFortress.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonFortressActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButtonFortress);
+        jButtonFortress.setBounds(300, 80, 120, 40);
+
+        jButtonColor.setText("Поиск");
+        jButtonColor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonColorActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButtonColor);
+        jButtonColor.setBounds(300, 130, 120, 40);
+
+        jButtonVessel.setText("Поиск");
+        jButtonVessel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonVesselActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButtonVessel);
+        jButtonVessel.setBounds(300, 190, 120, 40);
+
+        jButtonPrice.setText("Поиск");
+        jButtonPrice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonPriceActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButtonPrice);
+        jButtonPrice.setBounds(300, 250, 120, 40);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 51));
@@ -142,45 +245,215 @@ public class PodborPiva extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         String name = jTextField1.getText();
-        searchlist = search(name,z.ReadData());
+        searchlist = searchName(name,z.ReadData());
          
         jTextField1.setText("");
+        jTextFortress.setText("");
+        jTextColor.setText("");
+        jTextVessel.setText("");
+        jTextPrice.setText("");
         if(searchlist==null) jTextField1.setText("Error");
         if(searchlist.isEmpty()) {jTextField1.setText("No Data");
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
-        new Object [][] {
-             {null, null, null, null},
-             {null, null, null, null},
-             {null, null, null, null},
+        new Object [][] {           
              {null, null, null, null}
             },
          new String [] {
-          "Название", "Крепость", "Цвет", "Упаковка", "Адрес", "Цена"
+          "Название", "Крепость", "Цвет", "Упаковка","Особенности","Адрес",
+             "Цена"
     }
 ));}
         else { tableBM =  new JTabBM(searchlist);
-               jTable1.setModel(tableBM);
-        
-        
-       
+               jTable1.setModel(tableBM);      
         }
         
           
                 // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
-   /**
+
+    private void jTextFortressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFortressActionPerformed
+       
+    }//GEN-LAST:event_jTextFortressActionPerformed
+
+    private void jTextColorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextColorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextColorActionPerformed
+
+    private void jTextVesselActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextVesselActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextVesselActionPerformed
+
+    private void jTextPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextPriceActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextPriceActionPerformed
+
+    private void jButtonFortressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFortressActionPerformed
+    String name = jTextFortress.getText();
+        searchlist = searchFortress(name,z.ReadData());
+         
+        jTextField1.setText("");
+        jTextFortress.setText("");
+        jTextColor.setText("");
+        jTextVessel.setText("");
+        jTextPrice.setText("");
+        if(searchlist==null) jTextFortress.setText("Error");
+        if(searchlist.isEmpty()) {jTextFortress.setText("No Data");
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        new Object [][] {           
+             {null, null, null, null}
+            },
+         new String [] {
+          "Название", "Крепость", "Цвет", "Упаковка","Особенности","Адрес",
+             "Цена"
+    }
+));}
+        else { tableBM =  new JTabBM(searchlist);
+               jTable1.setModel(tableBM);      
+        }
+    }//GEN-LAST:event_jButtonFortressActionPerformed
+
+    private void jButtonColorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonColorActionPerformed
+        String name = jTextColor.getText();
+        searchlist = searchColor(name,z.ReadData());
+         
+        jTextField1.setText("");
+        jTextFortress.setText("");
+        jTextColor.setText("");
+        jTextVessel.setText("");
+        jTextPrice.setText("");
+        if(searchlist==null) jTextColor.setText("Error");
+        if(searchlist.isEmpty()) {jTextColor.setText("No Data");
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        new Object [][] {           
+             {null, null, null, null}
+            },
+         new String [] {
+          "Название", "Крепость", "Цвет", "Упаковка","Особенности","Адрес",
+             "Цена"
+    }
+));}
+        else { tableBM =  new JTabBM(searchlist);
+               jTable1.setModel(tableBM);      
+        }
+    }//GEN-LAST:event_jButtonColorActionPerformed
+
+    private void jButtonVesselActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVesselActionPerformed
+        String name = jTextVessel.getText();
+        searchlist = searchVessel(name,z.ReadData());
+         
+        jTextField1.setText("");
+        jTextFortress.setText("");
+        jTextColor.setText("");
+        jTextVessel.setText("");
+        jTextPrice.setText("");
+                
+        if(searchlist==null) jTextVessel.setText("Error");
+        if(searchlist.isEmpty()) {jTextVessel.setText("No Data");
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        new Object [][] {           
+             {null, null, null, null}
+            },
+         new String [] {
+          "Название", "Крепость", "Цвет", "Упаковка","Особенности","Адрес",
+             "Цена"
+    }
+));}
+        else { tableBM =  new JTabBM(searchlist);
+               jTable1.setModel(tableBM);      
+        }
+    }//GEN-LAST:event_jButtonVesselActionPerformed
+
+    private void jButtonPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPriceActionPerformed
+        String name = jTextPrice.getText();
+        
+        searchlist = searchPrice(name,z.ReadData());
+         
+        jTextField1.setText("");
+        jTextFortress.setText("");
+        jTextColor.setText("");
+        jTextVessel.setText("");
+        jTextPrice.setText("");
+                
+        if(searchlist==null) jTextPrice.setText("Error");
+        if(searchlist.isEmpty()) {jTextPrice.setText("No Data");
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        new Object [][] {           
+             {null, null, null, null}
+            },
+         new String [] {
+          "Название", "Крепость", "Цвет", "Упаковка","Особенности","Адрес",
+             "Цена"
+    }
+));}
+        else { tableBM =  new JTabBM(searchlist);
+               jTable1.setModel(tableBM);      
+        }
+    }//GEN-LAST:event_jButtonPriceActionPerformed
+   
+    /**
     * SD 
     * @param x - название пива, которое ищем
     * @param y - массив, по которому ищем
     * @return 
     */
-    public ArrayList<DataBM> search(String x, ArrayList<DataBM> y){
+    public ArrayList<DataBM> searchName(String x, ArrayList<DataBM> y){
         if(y==null) return null;
+        if(x.isEmpty())   return new ArrayList<>();
         ArrayList<DataBM> result = new ArrayList<>();
         
         for(int i=0; i<y.size(); i++){
-            if( x.startsWith(y.get(i).putName()) ) {System.out.println(i);
-                                           result.add(y.get(i));}; 
+            if( y.get(i).putName().contains(x) ) 
+                                           result.add(y.get(i)); 
+        }
+        
+        return result;
+    }
+    
+    public ArrayList<DataBM> searchFortress(String x, ArrayList<DataBM> y){
+        if(y==null) return null;
+        if(x.isEmpty())   return new ArrayList<>();
+        ArrayList<DataBM> result = new ArrayList<>();
+        
+        for(int i=0; i<y.size(); i++){
+            if( y.get(i).putFortress().startsWith(x) ) 
+                                           result.add(y.get(i)); 
+        }
+        
+        return result;
+    }
+    public ArrayList<DataBM> searchColor(String x, ArrayList<DataBM> y){
+        if(y==null) return null;
+        if(x.isEmpty())   return new ArrayList<>();
+        ArrayList<DataBM> result = new ArrayList<>();
+        
+        for(int i=0; i<y.size(); i++){
+            if( y.get(i).putColor().startsWith(x) ) 
+                                           result.add(y.get(i)); 
+        }
+        
+        return result;
+    }
+    
+    public ArrayList<DataBM> searchVessel(String x, ArrayList<DataBM> y){
+        if(y==null) return null;
+        if(x.isEmpty())   return new ArrayList<>();
+        ArrayList<DataBM> result = new ArrayList<>();
+        
+        for(int i=0; i<y.size(); i++){
+            if( y.get(i).putVessel().startsWith(x) ) 
+                                           result.add(y.get(i)); 
+        }
+        
+        return result;
+    }
+    public ArrayList<DataBM> searchPrice(String x, ArrayList<DataBM> y){
+        if(y==null) return null;
+        if(x.isEmpty())   return new ArrayList<>();
+        ArrayList<DataBM> result = new ArrayList<>();
+        
+        for(int i=0; i<y.size(); i++){
+            if( y.get(i).putPrice().startsWith(x) ) 
+                                           result.add(y.get(i)); 
         }
         
         return result;
@@ -238,12 +511,25 @@ public class PodborPiva extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButtonColor;
+    private javax.swing.JButton jButtonFortress;
+    private javax.swing.JButton jButtonPrice;
+    private javax.swing.JButton jButtonVessel;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTextField jTextColor;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextFortress;
+    private javax.swing.JTextField jTextPrice;
+    private javax.swing.JTextField jTextVessel;
     // End of variables declaration//GEN-END:variables
 
 }

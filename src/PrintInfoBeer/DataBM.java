@@ -15,6 +15,7 @@ public class DataBM {
     private String fortress;
     private String color;
     private String vessel;
+    private String specification;
     private String address;
     private String price;
     
@@ -33,12 +34,18 @@ public class DataBM {
     public void getVessel(String a){
         vessel=a;
     }
+    public void getSpecification(String a){
+        specification=a;
+    }
+   
     public void getAddress(String a){
         address=a;
     }
     public void getPrice(String a){
         price=a;
     }
+    
+    
     public String putId(){
         return id;
     }
@@ -53,6 +60,9 @@ public class DataBM {
     }
     public String putVessel(){
         return vessel;
+    }
+    public String putSpecification(){
+        return specification;
     }
     public String putAddress(){
         return address;
