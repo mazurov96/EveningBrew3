@@ -161,7 +161,8 @@ public class VievRecept extends javax.swing.JFrame {
           jTable1.setColumnSelectionInterval(column, column);
           jTable1.setRowSelectionInterval(row, row);
           TableModel model = jTable1.getModel();
-          Object value = model.getValueAt(row, column);   
+          Object value = model.getValueAt(row, column); 
+          
           jTextArea1.setText(value.toString());
           
           
@@ -170,7 +171,7 @@ public class VievRecept extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
       VievRecept.closeframe();
-      addRecepts.openframe();
+      AddRecepts.openframe();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

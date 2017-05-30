@@ -3,21 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package addPecept;
+package addClasses;
 
-import PrintRecept.DataRcpt;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
+
 
 /**
  *
  * @author Nikita
  */
-public class addRecept {
+public class AddFav {
     private static final String url = "jdbc:mysql://localhost:3306/new_schema";
     private static final String user = "BrewUser";
     private static final String password = "12345678";
@@ -25,21 +24,25 @@ public class addRecept {
     // JDBC variables for opening and managing connection
     private static Connection con;
     private static Statement stmt;
-    public  static ArrayList<DataRcpt> list;
+   
     
-    public addRecept(){
+    public AddFav(){
         
     }
     
-    public void add(String name, String pecept, 
-                     String author, String ingr,  String time){
+    public void add(String name, String fortress, 
+                     String color, String vessel,  
+                     String spec, String address, String price){
         
-        String query = "insert into beer_recipe (Name_beer, Recepe, Author, Ingredients, time) values("
+        String query = "insert into favorites (Name_beer, Fortress, Color, "
+                + "Vessel, Specification, ManufAddress, Price) values("
                 +quotate(name)+","
-                +quotate(pecept)+","
-                +quotate(author)+","
-                +quotate(ingr)+","
-                +quotate(time)
+                +quotate(fortress)+","
+                +quotate(color)+","
+                +quotate(vessel)+","
+                +quotate(spec)+","
+                +quotate(address)+","
+                +quotate(price)
                 +")";
  
         try {

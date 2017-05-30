@@ -3,7 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package PrintInfoBeer;
+package PrintFavorite;
+
 
 
 import java.sql.Connection;
@@ -17,7 +18,7 @@ import java.util.ArrayList;
  *
  * @author Nikita
  */
-public class ReadDataBM {
+public class ReadDataFav {
     private static final String url = "jdbc:mysql://localhost:3306/new_schema";
     private static final String user = "BrewUser";
     private static final String password = "12345678";
@@ -26,10 +27,10 @@ public class ReadDataBM {
     private static Connection con;
     private static Statement stmt;
     private static ResultSet rs;
-    private ArrayList<DataBM> listBM;
+    private ArrayList<DataFav> listFav;
     
-    public ArrayList<DataBM> ReadData(){
-        String query = "select * from beer_main";
+    public ArrayList<DataFav> ReadData(){
+        String query = "select * from favorites";
  
         try {
             // opening database connection to MySQL server
@@ -42,21 +43,20 @@ public class ReadDataBM {
                
             rs = stmt.executeQuery(query);
             
-            listBM = new ArrayList<>();
+            listFav = new ArrayList<>();
            
             while (rs.next()) {
-                DataBM ft=new DataBM();
-                 ft.getId(rs.getString(1));
-                 ft.getName(rs.getString(2));
-                 ft.getFortress(rs.getString(3));
-                 ft.getColor(rs.getString(4));
-                 ft.getVessel(rs.getString(5));
-                 ft.getSpecification(rs.getString(6));
-                 ft.getAddress(rs.getString(7));
-                 ft.getPrice(rs.getString(8));
-                 listBM.add(ft);
+                DataFav ft=new DataFav();
+                 ft.getName(rs.getString(1));
+                 ft.getFortress(rs.getString(2));
+                 ft.getColor(rs.getString(3));
+                 ft.getVessel(rs.getString(4));
+                 ft.getSpecification(rs.getString(5));
+                 ft.getAddress(rs.getString(6));
+                 ft.getPrice(rs.getString(7));
+                 listFav.add(ft);
                 
-                //System.out.println("Name Beer : " + carid);
+                
            }
             
            
@@ -68,7 +68,7 @@ public class ReadDataBM {
             try { con.close(); } catch(SQLException se) {  }
             try { stmt.close(); } catch(SQLException se) {  }
             try { rs.close(); } catch(SQLException se) {  }
-            return listBM;
+            return listFav;
         }
     }
 }

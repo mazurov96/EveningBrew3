@@ -5,6 +5,8 @@
  */
 package WorkWithBD;
 
+import PrintFavorite.JTabFav;
+import PrintFavorite.ReadDataFav;
 import eveningbrew.startWorkFrame;
 
 /**
@@ -14,30 +16,33 @@ import eveningbrew.startWorkFrame;
 public class IzbranFrame extends javax.swing.JFrame {
 
     static IzbranFrame stframe = new IzbranFrame();
-    
+    static JTabFav tableFav;
     public static void openframe(){
         stframe.setVisible(true);
+        tableFav.update();
     }
     
     public static void closeframe(){
         stframe.setVisible(false);
     }
     public IzbranFrame() {
+        ReadDataFav data=new ReadDataFav();
+        tableFav=new JTabFav(data.ReadData());
         initComponents();
     }
-    public void currentTime(){
-        
-    }
+   
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jButton1 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -46,6 +51,21 @@ public class IzbranFrame extends javax.swing.JFrame {
         jPanel2.setForeground(new java.awt.Color(255, 51, 102));
         jPanel2.setMaximumSize(new java.awt.Dimension(1100, 700));
         jPanel2.setLayout(null);
+
+        jTable1.setModel(tableFav);
+        jScrollPane1.setViewportView(jTable1);
+
+        jPanel2.add(jScrollPane1);
+        jScrollPane1.setBounds(150, 130, 800, 280);
+
+        jButton1.setText("Обновить таблицу");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton1);
+        jButton1.setBounds(160, 450, 190, 40);
 
         jButton6.setBackground(new java.awt.Color(51, 51, 255));
         jButton6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -72,11 +92,6 @@ public class IzbranFrame extends javax.swing.JFrame {
         jPanel2.add(jLabel4);
         jLabel4.setBounds(760, 20, 320, 80);
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel2.setText("ИЗБРАННОЕ");
-        jPanel2.add(jLabel2);
-        jLabel2.setBounds(440, 460, 190, 70);
-
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 0));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/foto/pivo2.jpg"))); // NOI18N
@@ -102,6 +117,12 @@ public class IzbranFrame extends javax.swing.JFrame {
       startWorkFrame.openframe();
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       ReadDataFav data=new ReadDataFav();
+       tableFav= new JTabFav(data.ReadData());
+       jTable1.setModel(tableFav);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -146,11 +167,13 @@ public class IzbranFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }

@@ -58,7 +58,7 @@ public class MagazineAdreses extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable1);
 
         jPanel2.add(jScrollPane1);
-        jScrollPane1.setBounds(240, 160, 640, 320);
+        jScrollPane1.setBounds(130, 110, 830, 370);
 
         jButton6.setBackground(new java.awt.Color(51, 51, 255));
         jButton6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
