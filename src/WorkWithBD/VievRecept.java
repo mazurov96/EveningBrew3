@@ -47,9 +47,12 @@ public class VievRecept extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jButton6 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1100, 700));
@@ -67,14 +70,14 @@ public class VievRecept extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable1);
 
         jPanel2.add(jScrollPane1);
-        jScrollPane1.setBounds(30, 80, 1020, 300);
+        jScrollPane1.setBounds(30, 70, 1020, 240);
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jScrollPane2.setViewportView(jTextArea1);
 
         jPanel2.add(jScrollPane2);
-        jScrollPane2.setBounds(30, 440, 1020, 60);
+        jScrollPane2.setBounds(30, 360, 1020, 80);
 
         jButton6.setBackground(new java.awt.Color(51, 51, 255));
         jButton6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -90,6 +93,24 @@ public class VievRecept extends javax.swing.JFrame {
         jPanel2.add(jButton6);
         jButton6.setBounds(440, 550, 280, 110);
 
+        jButton1.setText("Добавить рецепт");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton1);
+        jButton1.setBounds(30, 470, 180, 40);
+
+        jButton2.setText("Обновить таблицу");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton2);
+        jButton2.setBounds(230, 470, 170, 40);
+
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel3.setText("Time");
         jPanel2.add(jLabel3);
@@ -99,13 +120,19 @@ public class VievRecept extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255, 255, 51));
         jLabel4.setText("EVENING BREW");
         jPanel2.add(jLabel4);
-        jLabel4.setBounds(760, 20, 320, 80);
+        jLabel4.setBounds(760, 0, 320, 80);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 0));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/foto/pivo2.jpg"))); // NOI18N
         jPanel2.add(jLabel1);
         jLabel1.setBounds(-90, -40, 1200, 800);
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 0));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/foto/pivo2.jpg"))); // NOI18N
+        jPanel2.add(jLabel2);
+        jLabel2.setBounds(-90, -40, 1200, 800);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -140,6 +167,18 @@ public class VievRecept extends javax.swing.JFrame {
           
      } // TODO add your handling code here:
     }//GEN-LAST:event_jTable1MousePressed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+      VievRecept.closeframe();
+      addRecepts.openframe();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+       ReadDataRcpt data=new ReadDataRcpt();
+       myModel= new JTabRcpt(data.ReadData());
+       jTable1.setModel(myModel);
+       
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -208,8 +247,11 @@ public class VievRecept extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel2;
