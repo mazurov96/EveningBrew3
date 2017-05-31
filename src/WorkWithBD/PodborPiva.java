@@ -402,7 +402,7 @@ public class PodborPiva extends javax.swing.JFrame {
         ArrayList<DataBM> result = new ArrayList<>();
         
         for(int i=0; i<y.size(); i++){
-            if( y.get(i).putName().contains(x) ) 
+            if( y.get(i).putName().contains(x) || y.get(i).putName().equalsIgnoreCase(x) ) 
                                            result.add(y.get(i)); 
         }
         
@@ -427,7 +427,7 @@ public class PodborPiva extends javax.swing.JFrame {
         ArrayList<DataBM> result = new ArrayList<>();
         
         for(int i=0; i<y.size(); i++){
-            if( y.get(i).putColor().startsWith(x) ) 
+            if( y.get(i).putColor().equalsIgnoreCase(x)||y.get(i).putColor().contains(x) ) 
                                            result.add(y.get(i)); 
         }
         
@@ -440,7 +440,7 @@ public class PodborPiva extends javax.swing.JFrame {
         ArrayList<DataBM> result = new ArrayList<>();
         
         for(int i=0; i<y.size(); i++){
-            if( y.get(i).putVessel().startsWith(x) ) 
+            if( y.get(i).putVessel().equalsIgnoreCase(x)||y.get(i).putVessel().contains(x) ) 
                                            result.add(y.get(i)); 
         }
         

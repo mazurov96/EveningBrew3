@@ -73,7 +73,9 @@ public class VievRecept extends javax.swing.JFrame {
         jScrollPane1.setBounds(30, 70, 1020, 240);
 
         jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         jTextArea1.setRows(5);
+        jTextArea1.setText("Нажмите правой кнопкой мыши на ячейку для подробной инормации");
         jScrollPane2.setViewportView(jTextArea1);
 
         jPanel2.add(jScrollPane2);
@@ -151,6 +153,8 @@ public class VievRecept extends javax.swing.JFrame {
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
       VievRecept.closeframe();
       InformBDFrame.openframe();
+      jTextArea1.setText("Нажмите правой кнопкой мыши на "
+              + "ячейку для подробной инормации");
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
 
@@ -170,6 +174,8 @@ public class VievRecept extends javax.swing.JFrame {
     }//GEN-LAST:event_jTable1MousePressed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+      jTextArea1.setText("Нажмите правой кнопкой мыши на "
+              + " ячейку для подробной инормации");
       VievRecept.closeframe();
       AddRecepts1.openframe();
     }//GEN-LAST:event_jButton1ActionPerformed
