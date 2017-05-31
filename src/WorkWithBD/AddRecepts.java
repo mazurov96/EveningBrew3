@@ -217,7 +217,7 @@ public class AddRecepts extends javax.swing.JFrame {
    
         
         for(int i=0; i<y.size(); i++){
-            if( x.contains(y.get(i).putName()) ) return true; 
+            if( x.equalsIgnoreCase(y.get(i).putName()) ) return true; 
                                            
         }
         
